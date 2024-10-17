@@ -20,5 +20,10 @@ namespace IntroductionToAttachedProperty
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(ControlExtension.GetId(this.grid).ToString());
+        }
     }
 }
