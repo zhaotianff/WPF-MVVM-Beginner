@@ -19,6 +19,9 @@ namespace IntroductionToAttachedProperty
         public MainWindow()
         {
             InitializeComponent();
+
+            //Set attached property
+            ControlExtension.SetId(this.grid, 100);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
