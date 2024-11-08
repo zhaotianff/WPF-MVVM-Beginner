@@ -1,0 +1,15 @@
+﻿<Window x:Class="ConverterDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConverterDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:LabelForegroundConverter x:Key="LabelForegroundConverter"></local:LabelForegroundConverter>
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="label" Content="{Binding Status}" Foreground="{Binding Status,Converter={StaticResource LabelForegroundConverter}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></Label>
+    </Grid>
+</Window>

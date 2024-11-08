@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicDataContextDemo", "BasicDataContextDemo\BasicDataContextDemo.csproj", "{C8C64593-0A1A-4B31-8792-6AE960202B64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_BasicDataContextDemo", "BasicDataContextDemo\1_BasicDataContextDemo.csproj", "{C8C64593-0A1A-4B31-8792-6AE960202B64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyChangeNotifyDemo", "PropertyChangeNotifyDemo\PropertyChangeNotifyDemo.csproj", "{4D655DA3-122E-40F9-8256-A48B7B593AF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_PropertyChangeNotifyDemo", "PropertyChangeNotifyDemo\2_PropertyChangeNotifyDemo.csproj", "{4D655DA3-122E-40F9-8256-A48B7B593AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateSourceTriggerDemo", "UpdateSourceTriggerDemo\UpdateSourceTriggerDemo.csproj", "{FD1754F3-C9AF-4905-84B9-18DC72C4BFCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_UpdateSourceTriggerDemo", "UpdateSourceTriggerDemo\3_UpdateSourceTriggerDemo.csproj", "{FD1754F3-C9AF-4905-84B9-18DC72C4BFCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_ConverterDemo", "ConverterDemo\4_ConverterDemo.csproj", "{F01F5E7A-A23C-4A02-B297-E84F5C73FFAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{FD1754F3-C9AF-4905-84B9-18DC72C4BFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD1754F3-C9AF-4905-84B9-18DC72C4BFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD1754F3-C9AF-4905-84B9-18DC72C4BFCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F01F5E7A-A23C-4A02-B297-E84F5C73FFAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F01F5E7A-A23C-4A02-B297-E84F5C73FFAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F01F5E7A-A23C-4A02-B297-E84F5C73FFAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F01F5E7A-A23C-4A02-B297-E84F5C73FFAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
