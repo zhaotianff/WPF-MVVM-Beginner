@@ -1,0 +1,16 @@
+﻿<Window x:Class="CommandDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CommandDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="输入"></Label>
+        <TextBox Name="tbox" Text="{Binding InputText}"></TextBox>
+
+        <!--<Button Content="获取输入" Click="Button_Click"></Button>-->
+        <Button Content="获取输入" Command="{Binding GetInputCommand}"></Button>
+    </StackPanel>
+</Window>
