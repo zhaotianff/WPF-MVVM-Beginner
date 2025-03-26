@@ -3,39 +3,23 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace _1_ComplexDataObject
+namespace _2_ComplexDataObjectWithList
 {
-    internal class Book
-    {
-        public string Title { get; set; }
-        public string Author { get; set; }
-        public string Publish { get; set; }
-        public string Price { get; set; }
-        public string Date { get; set; }
-        public string Descrption { get; set; }
-        public string CoverImageUrl { get; set; }
-    }
-
-    /// <summary>
-    /// 这里仅作演示，正常只需要将类型命名为Book，并实现INotifyPropertyChanged即可，不需要特地增加Observable前缀
-    /// </summary>
-    public class ObservableBook : INotifyPropertyChanged
+    public class Book : INotifyPropertyChanged
     {
         private string title;
 
-        public string Title 
-        { 
-            get => title; 
+        public string Title
+        {
+            get => title;
             set
             {
                 title = value;
                 RaiseChanged();
-            } 
+            }
         }
 
         private string author;
@@ -51,7 +35,7 @@ namespace _1_ComplexDataObject
 
         private string publish;
 
-        public string Publish 
+        public string Publish
         {
             get => publish;
             set
@@ -63,18 +47,18 @@ namespace _1_ComplexDataObject
 
         private string price;
 
-        public string Price 
+        public string Price
         {
             get => price;
             set
             {
                 price = value;
                 RaiseChanged();
-            } 
+            }
         }
 
         private string date;
-        public string Date 
+        public string Date
         {
             get => date;
             set
@@ -86,7 +70,7 @@ namespace _1_ComplexDataObject
 
         private string description;
 
-        public string Descrption 
+        public string Descrption
         {
             get => description;
             set
@@ -113,7 +97,7 @@ namespace _1_ComplexDataObject
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        public void RaiseChanged([CallerMemberName]string memberName = "")
+        public void RaiseChanged([CallerMemberName] string memberName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
         }

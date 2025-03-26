@@ -6,20 +6,78 @@
         xmlns:local="clr-namespace:_1_ComplexDataObject"
         xmlns:tianxia="clr-namespace:TianXiaTech;assembly=BlurWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="500" Width="900" WindowStartupLocation="CenterScreen">
     <tianxia:BlurWindow.Background>
         <SolidColorBrush Color="White" Opacity=".9"></SolidColorBrush>
     </tianxia:BlurWindow.Background>
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+    <TabControl>
+        <TabItem Header="Book" Name="tab_Book">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-        <Image Source="{Binding CoverImageUrl}" Stretch="Uniform" Margin="20"></Image>
+                <Image Source="{Binding CoverImageUrl}" Stretch="Uniform" Margin="20"></Image>
 
-        <StackPanel Grid.Column="1">
-            <Label Content="{Binding Title}" FontSize="20" FontWeight="Bold"></Label>
-        </StackPanel>
-    </Grid>
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Title}" FontSize="25" FontWeight="Bold" Margin="10"></TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Descrption}" FontSize="20" Foreground="Silver" Margin="10"></TextBlock>
+                    <Separator Height="1" Foreground="Silver" Margin="10"></Separator>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="作者:"></Label>
+                        <Label Content="{Binding Author}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="出版社:"></Label>
+                        <Label Content="{Binding Publish}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="价格 ￥: " Foreground="Red" FontWeight="Bold"></Label>
+                        <Label Content="{Binding Price}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="出版日期:"></Label>
+                        <Label Content="{Binding Date}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+
+                    <Button Content="修改价格" HorizontalAlignment="Center" Width="88" Height="28" Click="btn_ModifyBook_Click"></Button>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem Header="ObservableBook" Name="tab_ObservableBook">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="{Binding CoverImageUrl}" Stretch="Uniform" Margin="20"></Image>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Title}" FontSize="25" FontWeight="Bold" Margin="10"></TextBlock>
+                    <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Descrption}" FontSize="20" Foreground="Silver" Margin="10"></TextBlock>
+                    <Separator Height="1" Foreground="Silver" Margin="10"></Separator>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="作者:"></Label>
+                        <Label Content="{Binding Author}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="出版社:"></Label>
+                        <Label Content="{Binding Publish}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="价格 ￥: " Foreground="Red" FontWeight="Bold"></Label>
+                        <Label Content="{Binding Price}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <Label Content="出版日期:"></Label>
+                        <Label Content="{Binding Date}" Foreground="Silver"  ></Label>
+                    </StackPanel>
+
+                    <Button Content="修改价格" HorizontalAlignment="Center" Width="88" Height="28" Click="btn_ModifyObservableBook_Click"></Button>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </tianxia:BlurWindow>
