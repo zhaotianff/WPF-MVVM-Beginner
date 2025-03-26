@@ -1,0 +1,17 @@
+﻿<Window x:Class="PassParameterToCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PassParameterToCommand"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Horizontal">
+        <!--可以直接指定命令参数-->
+        <Button Content="按钮1" Command="{Binding ShowMessageCommand}" CommandParameter="按钮1" VerticalAlignment="Center" Width="128" Height="28" Margin="10"></Button>
+        <!--也可以绑定自身-->
+        <Button Content="按钮2" Command="{Binding ShowMessageCommand}" CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self},Path=Content}" VerticalAlignment="Center" Width="128" Height="28" Margin="10"></Button>
+        <!--也可以绑定到指定控件的指定属性-->
+        <Button Content="按钮3" Name="btn3" Command="{Binding ShowMessageCommand}" CommandParameter="{Binding ElementName=btn3,Path=Content}" VerticalAlignment="Center" Width="128" Height="28" Margin="10"></Button>
+    </StackPanel>
+</Window>
