@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace INotifyPropertyChangedDemo
+namespace FirstViewModel
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -19,8 +19,6 @@ namespace INotifyPropertyChangedDemo
         public MainWindow()
         {
             InitializeComponent();
-
-            this.DataContext = new MainViewModel();
         }
     }
 }
