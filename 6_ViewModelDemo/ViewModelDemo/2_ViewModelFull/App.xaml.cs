@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace _2_ComplexDataObjectWithList
+namespace _2_ViewModelFull
 {
     /// <summary>
     /// Interaction logic for App.xaml

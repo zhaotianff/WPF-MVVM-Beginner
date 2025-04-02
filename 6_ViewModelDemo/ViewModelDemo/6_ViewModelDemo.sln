@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_ComplexDataObject", "1_ComplexDataObject\1_ComplexDataObject.csproj", "{50FD1D9D-C8A7-4A07-9D5D-FB245C29E166}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_ViewModelStartup", "1_ViewModelStartup\1_ViewModelStartup.csproj", "{50FD1D9D-C8A7-4A07-9D5D-FB245C29E166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_ComplexDataObjectWithList", "2_ComplexDataObjectWithList\2_ComplexDataObjectWithList.csproj", "{797FDDF6-73F4-42BF-8CCF-0FDAFF192A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_ViewModelFull", "2_ViewModelFull\2_ViewModelFull.csproj", "{797FDDF6-73F4-42BF-8CCF-0FDAFF192A43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

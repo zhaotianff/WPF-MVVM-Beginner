@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace _1_ComplexDataObject
+namespace _1_ViewModelStartup
 {
     /// <summary>
     /// Interaction logic for App.xaml

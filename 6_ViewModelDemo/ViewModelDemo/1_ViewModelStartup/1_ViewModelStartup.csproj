@@ -3,8 +3,8 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>_2_ComplexDataObjectWithList</RootNamespace>
-    <Nullable>enable</Nullable>
+    <RootNamespace>_1_ViewModelStartup</RootNamespace>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>

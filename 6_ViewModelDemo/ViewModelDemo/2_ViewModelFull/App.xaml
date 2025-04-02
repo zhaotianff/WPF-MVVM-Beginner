@@ -1,7 +1,7 @@
-﻿<Application x:Class="_1_ComplexDataObject.App"
+﻿<Application x:Class="_2_ViewModelFull.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:_1_ComplexDataObject"
+             xmlns:local="clr-namespace:_2_ViewModelFull"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

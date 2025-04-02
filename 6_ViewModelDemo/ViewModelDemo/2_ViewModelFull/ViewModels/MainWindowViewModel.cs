@@ -5,8 +5,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
+using _2_ViewModelFull.Command;
+using _2_ViewModelFull.Models;
 
-namespace _2_ComplexDataObjectWithList
+namespace _2_ViewModelFull.ViewModels
 {
     public class MainWindowViewModel
     {
@@ -47,9 +51,21 @@ namespace _2_ComplexDataObjectWithList
             }
         }
 
+        public ICommand BrowseCoverCommand { get; private set; }
+
+        public ICommand AddBookCommand { get; private set; }
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public MainWindowViewModel()
+        {
+            BrowseCoverCommand = new RelayCommand(BrowseCover);
+            AddBookCommand = new RelayCommand(AddBook);
+
+            LoadDemoData();   
+        }
+
+        private void LoadDemoData()
         {
             Book book = new Book();
             book.CoverImageUrl = "http://img3m1.ddimg.cn/16/5/29681701-1_w_1709623057.jpg";
@@ -71,6 +87,43 @@ namespace _2_ComplexDataObjectWithList
 
             BookList.Add(book);
             BookList.Add(book2);
+        }
+
+        private void AddBook()
+        {
+            //等后面学习命令绑定以后，这里的逻辑也是放到ViewModel中进行处理
+
+            var tempBook = new Book();
+            tempBook.Title = NewBook.Title;
+            tempBook.Descrption = NewBook.Descrption;
+            tempBook.Author = NewBook.Author;
+            tempBook.Publish = NewBook.Publish;
+            tempBook.Price = NewBook.Price;
+            tempBook.Date = NewBook.Date;
+            tempBook.CoverImageUrl = NewBook.CoverImageUrl;
+
+            //将NewBook添加到列表中
+            BookList.Add(tempBook);
+
+            //重置NewBook
+            NewBook.Title = "";
+            NewBook.Descrption = "";
+            NewBook.Author = "";
+            NewBook.Publish = "";
+            NewBook.Price = "";
+            NewBook.Date = "";
+            NewBook.CoverImageUrl = null;
+        }
+
+        private void BrowseCover()
+        {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
+            openFileDialog.Filter = "图片文件|*.jpg;*.bmp;*.png";
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                NewBook.CoverImageUrl = openFileDialog.FileName;
+            }
         }
     }
 }

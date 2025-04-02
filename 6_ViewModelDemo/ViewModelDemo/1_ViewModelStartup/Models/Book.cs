@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_ComplexDataObjectWithList
+namespace _1_ViewModelStartup.Models
 {
     public class Book : INotifyPropertyChanged
     {
