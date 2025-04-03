@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MethodsToSetViewModel.ViewModels
+{
+    public class ViewModelLocator
+    {
+        private MainWindowViewModel mainWindowViewModel;
+
+        public MainWindowViewModel MainWindowViewModel
+        {
+            get
+            {
+                if (mainWindowViewModel == null)
+                    mainWindowViewModel = new MainWindowViewModel();
+
+                return mainWindowViewModel;
+            }
+        }
+    }
+}
