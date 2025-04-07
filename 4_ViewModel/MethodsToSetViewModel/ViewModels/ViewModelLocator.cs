@@ -8,16 +8,16 @@ namespace MethodsToSetViewModel.ViewModels
 {
     public class ViewModelLocator
     {
-        private MainWindowViewModel mainWindowViewModel;
+        private ViewCViewModel viewCViewModel;
 
-        public MainWindowViewModel MainWindowViewModel
+        public ViewCViewModel ViewCViewModel
         {
             get
             {
-                if (mainWindowViewModel == null)
-                    mainWindowViewModel = new MainWindowViewModel();
+                if (viewCViewModel == null)
+                    viewCViewModel = new ViewCViewModel();
 
-                return mainWindowViewModel;
+                return viewCViewModel;
             }
         }
     }

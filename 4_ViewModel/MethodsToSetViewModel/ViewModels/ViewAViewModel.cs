@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace MethodsToSetViewModel.ViewModels
 {
-    public class MainWindowViewModel
+    public class ViewAViewModel
     {
-        public MainWindowViewModel()
-        {
-
-        }
     }
 }

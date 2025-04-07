@@ -6,11 +6,10 @@
         xmlns:local="clr-namespace:MethodsToSetViewModel"
         xmlns:viewmodel="clr-namespace:MethodsToSetViewModel.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" DataContext="{Binding Source={StaticResource Locator},Path=MainWindowViewModel}">
-    <!--<Window.DataContext>
-        <viewmodel:MainWindowViewModel></viewmodel:MainWindowViewModel>
-    </Window.DataContext>-->
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800">
+    <WrapPanel>
+        <Button Content="ViewA" Margin="20" Click="Button_Click"></Button>
+        <Button Content="ViewB" Margin="20" Click="Button_Click_1"></Button>
+        <Button Content="ViewC" Margin="20" Click="Button_Click_2"></Button>
+    </WrapPanel>
 </Window>

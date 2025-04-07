@@ -1,4 +1,5 @@
 ﻿using MethodsToSetViewModel.ViewModels;
+using MethodsToSetViewModel.Views;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,9 +20,25 @@ namespace MethodsToSetViewModel
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+        }
 
-            //this.DataContext = new MainWindowViewModel();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ViewA viewA = new ViewA();
+            viewA.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ViewB viewB = new ViewB();
+            viewB.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ViewC viewC = new ViewC();
+            viewC.Show();
         }
     }
 }
