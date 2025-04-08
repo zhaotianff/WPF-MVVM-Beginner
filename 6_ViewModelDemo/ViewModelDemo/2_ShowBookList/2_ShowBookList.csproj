@@ -3,14 +3,15 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <RootNamespace>_2_ViewModelFull</RootNamespace>
-    <Nullable>disable</Nullable>
+    <RootNamespace>_2_ShowBookList</RootNamespace>
+    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BlurWindow" Version="7.0.1" />
+    <PackageReference Include="WPFDevelopers" Version="0.0.0.1" />
   </ItemGroup>
 
 </Project>

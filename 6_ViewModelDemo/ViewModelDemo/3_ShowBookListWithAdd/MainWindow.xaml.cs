@@ -1,5 +1,4 @@
-﻿using _2_ViewModelFull.ViewModels;
-using System.Collections.ObjectModel;
+﻿using _3_ShowBookListWithAdd.ViewModels;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,7 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _2_ViewModelFull
+namespace _3_ShowBookListWithAdd
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

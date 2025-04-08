@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace _2_ViewModelFull.Command
+namespace _2_ShowBookList.Command
 {
     public class RelayCommand : ICommand
     {

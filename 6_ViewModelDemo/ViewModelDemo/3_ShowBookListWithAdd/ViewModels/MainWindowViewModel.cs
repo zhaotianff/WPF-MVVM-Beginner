@@ -1,18 +1,17 @@
-﻿using System;
+﻿using _3_ShowBookListWithAdd.Commands;
+using _3_ShowBookListWithAdd.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
-using _2_ViewModelFull.Command;
-using _2_ViewModelFull.Models;
 
-namespace _2_ViewModelFull.ViewModels
+namespace _3_ShowBookListWithAdd.ViewModels
 {
-    public class MainWindowViewModel
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
         private ObservableCollection<Book> bookList = new ObservableCollection<Book>();
 
@@ -27,15 +26,15 @@ namespace _2_ViewModelFull.ViewModels
         }
 
 
-        private Book selectedBook;
+        private Book book;
 
-        public Book SelectedBook
+        public Book Book
         {
-            get => selectedBook;
+            get => book;
             set
             {
-                selectedBook = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SelectedBook"));
+                book = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Book"));
             }
         }
 
@@ -55,14 +54,20 @@ namespace _2_ViewModelFull.ViewModels
 
         public ICommand AddBookCommand { get; private set; }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public ICommand OrderByPriceAscCommand { get; private set; }
+
+        public ICommand OrderByPriceDescCommand { get; private set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public MainWindowViewModel()
         {
             BrowseCoverCommand = new RelayCommand(BrowseCover);
             AddBookCommand = new RelayCommand(AddBook);
+            OrderByPriceAscCommand = new RelayCommand(OrderByPriceAsc);
+            OrderByPriceDescCommand = new RelayCommand(OrderByPriceDesc);
 
-            LoadDemoData();   
+            LoadDemoData();
         }
 
         private void LoadDemoData()
@@ -74,7 +79,7 @@ namespace _2_ViewModelFull.ViewModels
             book.Author = "刘凤飞";
             book.Publish = "清华大学出版社";
             book.Date = "2024年01月 ";
-            book.Price = "74.00";
+            book.Price = 74.00f;
 
             Book book2 = new Book();
             book2.CoverImageUrl = "http://img3m4.ddimg.cn/64/13/29798074-1_u_1731275892.jpg";
@@ -83,7 +88,7 @@ namespace _2_ViewModelFull.ViewModels
             book2.Author = "陈春燕";
             book2.Publish = "四川美术出版社";
             book2.Date = "2024年09月";
-            book2.Price = "4.89";
+            book2.Price = 4.89f;
 
             BookList.Add(book);
             BookList.Add(book2);
@@ -91,8 +96,6 @@ namespace _2_ViewModelFull.ViewModels
 
         private void AddBook()
         {
-            //等后面学习命令绑定以后，这里的逻辑也是放到ViewModel中进行处理
-
             var tempBook = new Book();
             tempBook.Title = NewBook.Title;
             tempBook.Descrption = NewBook.Descrption;
@@ -110,7 +113,7 @@ namespace _2_ViewModelFull.ViewModels
             NewBook.Descrption = "";
             NewBook.Author = "";
             NewBook.Publish = "";
-            NewBook.Price = "";
+            NewBook.Price = 0f;
             NewBook.Date = "";
             NewBook.CoverImageUrl = null;
         }
@@ -124,6 +127,16 @@ namespace _2_ViewModelFull.ViewModels
             {
                 NewBook.CoverImageUrl = openFileDialog.FileName;
             }
+        }
+
+        private void OrderByPriceDesc()
+        {
+            BookList = new ObservableCollection<Book>(BookList.OrderByDescending(x => x.Price));
+        }
+
+        private void OrderByPriceAsc()
+        {
+            BookList = new ObservableCollection<Book>(BookList.OrderBy(x => x.Price));
         }
     }
 }

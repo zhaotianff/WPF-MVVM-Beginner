@@ -1,0 +1,82 @@
+﻿<blur:BlurWindow x:Class="_2_ShowBookList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_2_ShowBookList"
+        xmlns:blur="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <blur:BlurWindow.Background>
+        <SolidColorBrush Color="White" Opacity=".9"></SolidColorBrush>
+    </blur:BlurWindow.Background>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="45"/>
+            </Grid.RowDefinitions>
+
+            <ListBox ItemsSource="{Binding BookList}" SelectedItem="{Binding Book}" Margin="5">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <!--使用数据模板，让书名支持换行-->
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold" TextWrapping="WrapWithOverflow" Width="260"></TextBlock>
+                            <Grid Grid.Row="1" Margin="0,5,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="{Binding Author}"></Label>
+                                <TextBlock Text="{Binding Price,StringFormat={}{0}元}" HorizontalAlignment="Left"  Grid.Column="1"></TextBlock>
+                            </Grid>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <DockPanel LastChildFill="False" Grid.Row="1">
+                <Button Content="价格升序" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding OrderByPriceAscCommand}"></Button>
+                <Button Content="价格降序" VerticalAlignment="Center" Margin="5,0,0,0" Command="{Binding OrderByPriceDescCommand}"></Button>
+            </DockPanel>
+        </Grid>
+
+        <StackPanel Grid.Column="1">
+            <Image Source="{Binding Book.CoverImageUrl}" Stretch="Uniform" Margin="20" Height="150"></Image>
+
+            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Book.Title}" FontWeight="Bold" Margin="5"></TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Book.Descrption}" Foreground="Silver" Margin="5"></TextBlock>
+            <Separator Height="1" Foreground="Silver" Margin="2"></Separator>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="作者:"></Label>
+                <Label Content="{Binding Book.Author}" Foreground="Silver"  ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="出版社:"></Label>
+                <Label Content="{Binding Book.Publish}" Foreground="Silver"  ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="价格 ￥: " Foreground="Red" FontWeight="Bold"></Label>
+                <Label Content="{Binding Book.Price}" Foreground="Silver"  ></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Label Content="出版日期:"></Label>
+                <Label Content="{Binding Book.Date}" Foreground="Silver"  ></Label>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</blur:BlurWindow>

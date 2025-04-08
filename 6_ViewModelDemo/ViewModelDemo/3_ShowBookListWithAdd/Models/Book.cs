@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_ViewModelFull.Models
+namespace _3_ShowBookListWithAdd.Models
 {
     public class Book : INotifyPropertyChanged
     {
@@ -45,9 +45,9 @@ namespace _2_ViewModelFull.Models
             }
         }
 
-        private string price;
+        private float price;
 
-        public string Price
+        public float Price
         {
             get => price;
             set

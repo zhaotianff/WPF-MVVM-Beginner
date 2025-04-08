@@ -18,27 +18,27 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Image Source="{Binding CoverImageUrl}" Stretch="Uniform" Margin="20"></Image>
+        <Image Source="{Binding Book.CoverImageUrl}" Stretch="Uniform" Margin="20"></Image>
 
         <StackPanel Grid.Column="1">
-            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Title}" FontSize="25" FontWeight="Bold" Margin="10"></TextBlock>
-            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Descrption}" FontSize="20" Foreground="Silver" Margin="10"></TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Book.Title}" FontSize="25" FontWeight="Bold" Margin="10"></TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow" Text="{Binding Book.Descrption}" FontSize="20" Foreground="Silver" Margin="10"></TextBlock>
             <Separator Height="1" Foreground="Silver" Margin="10"></Separator>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Label Content="作者:"></Label>
-                <Label Content="{Binding Author}" Foreground="Silver"  ></Label>
+                <Label Content="{Binding Book.Author}" Foreground="Silver"  ></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Label Content="出版社:"></Label>
-                <Label Content="{Binding Publish}" Foreground="Silver"  ></Label>
+                <Label Content="{Binding Book.Publish}" Foreground="Silver"  ></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Label Content="价格 ￥: " Foreground="Red" FontWeight="Bold"></Label>
-                <Label Content="{Binding Price}" Foreground="Silver"  ></Label>
+                <Label Content="{Binding Book.Price}" Foreground="Silver"  ></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="10">
                 <Label Content="出版日期:"></Label>
-                <Label Content="{Binding Date}" Foreground="Silver"  ></Label>
+                <Label Content="{Binding Book.Date}" Foreground="Silver"  ></Label>
             </StackPanel>
         </StackPanel>
     </Grid>

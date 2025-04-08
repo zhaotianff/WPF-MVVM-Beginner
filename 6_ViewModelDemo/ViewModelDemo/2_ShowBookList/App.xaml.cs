@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace _2_ViewModelFull
+namespace _2_ShowBookList
 {
     /// <summary>
     /// Interaction logic for App.xaml
