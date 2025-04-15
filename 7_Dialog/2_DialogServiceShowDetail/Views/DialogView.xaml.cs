@@ -1,5 +1,8 @@
-﻿using _1_DialogService.ViewModels;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -7,21 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _1_DialogService
+namespace _2_DialogServiceShowDetail.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// DialogView.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DialogView : TianXiaTech.BlurWindow
     {
-        public MainWindow()
+        public DialogView()
         {
             InitializeComponent();
-
-            this.DataContext = new MainWindowViewModel();
         }
     }
 }

@@ -1,0 +1,23 @@
+﻿<tianxia:BlurWindow x:Class="_2_DialogServiceShowDetail.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:tianxia="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        xmlns:local="clr-namespace:_2_DialogServiceShowDetail"
+        mc:Ignorable="d"
+        Title="MainWindow" TitleVisibility="Collapsed" Height="400" Width="300" MinimizeVisibility="Collapsed" MaximizeVisibility="Collapsed" WindowStartupLocation="CenterScreen">
+    <tianxia:BlurWindow.Background>
+        <SolidColorBrush Color="White" Opacity=".9"></SolidColorBrush>
+    </tianxia:BlurWindow.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+
+        <ListBox ItemsSource="{Binding StudentList}" BorderThickness="0" DisplayMemberPath="Name"></ListBox>
+
+        <Button Content="显示详情" Width="88" Height="28" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Command="{Binding ShowStudentDetailCommand}"></Button>
+    </Grid>
+</tianxia:BlurWindow>

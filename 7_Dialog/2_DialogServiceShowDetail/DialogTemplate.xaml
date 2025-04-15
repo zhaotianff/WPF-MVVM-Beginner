@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:_2_DialogServiceShowDetail.ViewModels"
+                    xmlns:view="clr-namespace:_2_DialogServiceShowDetail.Views">
+    <DataTemplate DataType="{x:Type vm:StudentViewModel}">
+        <view:StudentView />
+    </DataTemplate>
+</ResourceDictionary>

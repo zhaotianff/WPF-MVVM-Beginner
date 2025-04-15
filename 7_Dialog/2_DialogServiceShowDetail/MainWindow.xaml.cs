@@ -1,4 +1,4 @@
-﻿using _1_DialogService.ViewModels;
+﻿using _2_DialogServiceShowDetail.ViewModels;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,12 +10,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _1_DialogService
+namespace _2_DialogServiceShowDetail
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : TianXiaTech.BlurWindow
     {
         public MainWindow()
         {
