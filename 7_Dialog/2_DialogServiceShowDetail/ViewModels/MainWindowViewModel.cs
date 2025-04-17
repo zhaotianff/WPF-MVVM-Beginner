@@ -12,6 +12,8 @@ namespace _2_DialogServiceShowDetail.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        private IDialogService dialogService;
+
         private ObservableCollection<StudentViewModel> studentList = new ObservableCollection<StudentViewModel>();
 
         public ObservableCollection<StudentViewModel> StudentList
@@ -24,12 +26,27 @@ namespace _2_DialogServiceShowDetail.ViewModels
             }
         }
 
+        private int studentListSelectedIndex = -1;
+
+        public int StudentListSelectedIndex
+        {
+            get => studentListSelectedIndex;
+            set
+            {
+                studentListSelectedIndex = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("StudentListSelectedIndex"));
+            }
+        }
+
+
         public ICommand ShowStudentDetailCommand { get; private set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public MainWindowViewModel()
         {
+            dialogService = DialogService.DialogService.GetInstance();
+
             ShowStudentDetailCommand = new RelayCommand(ShowStudentDetail);
 
             StudentList.Add(new StudentViewModel() { Id = 1,Name  = "测试1",Age = "17"});
@@ -39,7 +56,7 @@ namespace _2_DialogServiceShowDetail.ViewModels
 
         private void ShowStudentDetail()
         {
-            //显示对话框
+            dialogService.ShowStudentDetail(StudentList[StudentListSelectedIndex]);
         }
     }
 }

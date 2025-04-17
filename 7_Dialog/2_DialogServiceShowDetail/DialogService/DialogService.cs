@@ -1,4 +1,5 @@
 ﻿using _2_DialogServiceShowDetail.ViewModels;
+using _2_DialogServiceShowDetail.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,12 @@ namespace _2_DialogServiceShowDetail.DialogService
             return instance;
         }
 
-        public void ShowStudentDetail(StudentViewModel student)
+        public void ShowStudentDetail(StudentViewModel studentViewModel)
         {
-            
+            var dialog = new DialogView() { DataContext = studentViewModel };
+            dialog.Owner = Application.Current.MainWindow;
+            dialog.ShowInTaskbar = false;
+            dialog.ShowDialog();
         }
     }
 }

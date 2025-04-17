@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_2_DialogServiceShowDetail.Views"
         xmlns:tianxia="clr-namespace:TianXiaTech;assembly=BlurWindow"
         mc:Ignorable="d"
-        Title="DialogView" Height="450" Width="800">
+        Title="显示详情" Height="150" Width="300" WindowStartupLocation="CenterOwner" MinimizeVisibility="Collapsed" MaximizeVisibility="Collapsed">
     <tianxia:BlurWindow.Background>
         <SolidColorBrush Color="White" Opacity=".9"></SolidColorBrush>
     </tianxia:BlurWindow.Background>

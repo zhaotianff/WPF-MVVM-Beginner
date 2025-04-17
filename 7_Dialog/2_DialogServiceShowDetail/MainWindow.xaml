@@ -16,7 +16,7 @@
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
 
-        <ListBox ItemsSource="{Binding StudentList}" BorderThickness="0" DisplayMemberPath="Name"></ListBox>
+        <ListBox ItemsSource="{Binding StudentList}" SelectedIndex="{Binding StudentListSelectedIndex}" BorderThickness="0" DisplayMemberPath="Name"></ListBox>
 
         <Button Content="显示详情" Width="88" Height="28" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Command="{Binding ShowStudentDetailCommand}"></Button>
     </Grid>
