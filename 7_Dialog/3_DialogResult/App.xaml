@@ -1,0 +1,9 @@
+﻿<Application x:Class="_3_DialogResult.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_3_DialogResult"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="DialogTemplate.xaml"/>
+    </Application.Resources>
+</Application>

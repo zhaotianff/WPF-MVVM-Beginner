@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:_3_DialogResult.Views"
+                    xmlns:viewmodel="clr-namespace:_3_DialogResult.ViewModels">
+    <DataTemplate DataType="{x:Type viewmodel:NotificationDialogViewModel}">
+        <view:NotificationDialog/>
+    </DataTemplate>
+</ResourceDictionary>

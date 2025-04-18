@@ -1,0 +1,18 @@
+﻿<Window x:Class="_3_DialogResult.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3_DialogResult"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="{Binding DialogResultText}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50"></Label>
+        <Button Content="Show" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="28" Grid.Row="1" Command="{Binding ShowDialogCommand}"></Button>
+    </Grid>
+</Window>
