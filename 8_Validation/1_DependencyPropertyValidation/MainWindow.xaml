@@ -1,0 +1,15 @@
+﻿<Window x:Class="_1_DependencyPropertyValidation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1_DependencyPropertyValidation"
+        xmlns:controls="clr-namespace:_1_DependencyPropertyValidation.Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <controls:PositiveValueTextBox Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" PositiveNumber="{Binding PositiveNumber}"></controls:PositiveValueTextBox>
+
+        <Button Content="Ok" HorizontalAlignment="Center" VerticalAlignment="Center" Width="88" Height="28" Margin="0,100,0,0" Command="{Binding ConfirmCommand}"></Button>
+    </Grid>
+</Window>
