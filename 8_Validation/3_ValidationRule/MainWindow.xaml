@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:validationRules="clr-namespace:_3_ValidationRule.CustomValidationRule"
+        xmlns:converters="clr-namespace:_3_ValidationRule.Converters"
         xmlns:local="clr-namespace:_3_ValidationRule"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <converters:MultiLangDigitConverter x:Key="MultiLangDigitConverter"></converters:MultiLangDigitConverter>
+    </Window.Resources>
     <StackPanel>
+        <Label Content="数字输入验证" Margin="20,20,20,0"></Label>
         <TextBox Height="30" Margin="20" VerticalContentAlignment="Center">
             <TextBox.Style>
                 <Style TargetType="TextBox">
@@ -45,6 +50,49 @@
                 </Binding>
             </TextBox.Text>
         </TextBox>
+
+        <Label Content="支持多语言的数字输入验证" Margin="20"></Label>
+        <DockPanel LastChildFill="True">
+            <TextBox Height="30" Margin="20,0,20,20" Width="650" VerticalContentAlignment="Center">
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Validation.ErrorTemplate">
+                            <Setter.Value>
+                                <ControlTemplate>
+                                    <DockPanel LastChildFill="True">
+                                        <Border BorderBrush="Green" BorderThickness="2">
+                                            <AdornedElementPlaceholder Name="adornedElement"></AdornedElementPlaceholder>
+                                        </Border>
+                                        <TextBlock DockPanel.Dock="Right" Foreground="Red" Margin="3,0,0,0" Text="*" FontSize="14" FontWeight="Bold" VerticalAlignment="Center"></TextBlock>
+                                    </DockPanel>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+
+                        <Style.Triggers>
+                            <Trigger Property="Validation.HasError" Value="True">
+                                <Setter Property="ToolTip">
+                                    <Setter.Value>
+                                        <Binding RelativeSource="{x:Static RelativeSource.Self}" Path="(Validation.Errors)[0].ErrorContent"></Binding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+                <TextBox.Text>
+                    <Binding Path="RangeDigitValueWithConverter" Converter="{StaticResource MultiLangDigitConverter}">
+                        <Binding.ValidationRules>
+                            <!--错误信息未支持多语言，这里主要是演示Converter和ValidationStep-->
+                            <validationRules:RangeLimitRuleWithParameter MinValue="1" MaxValue="3" ValidationStep="ConvertedProposedValue"></validationRules:RangeLimitRuleWithParameter>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
+            <Button Content="En" Width="30" DockPanel.Dock="Right" VerticalAlignment="Top" Command="{Binding SwitchEnCommand}"></Button>
+            <Button Content="中" Width="30" DockPanel.Dock="Right" VerticalAlignment="Top" Command="{Binding SwitchChsCommand}"></Button>
+        </DockPanel>
         <Button Content="确认" Width="88" Height="28" HorizontalAlignment="Center"></Button>
     </StackPanel>
 </Window>
