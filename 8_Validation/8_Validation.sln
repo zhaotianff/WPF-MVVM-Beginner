@@ -9,9 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_ErrorTemplate", "2_ErrorT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_ValidationRule", "3_ValidationRule\3_ValidationRule.csproj", "{0FAB6408-6EAB-41E9-BCD1-1BB8C1FB9355}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_IDataErrorInfo", "4_IDataErrorInfo\4_IDataErrorInfo.csproj", "{9FE20196-B94F-4899-9D77-74CF170163F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4_IDataErrorInfo", "4_IDataErrorInfo\4_IDataErrorInfo.csproj", "{9FE20196-B94F-4899-9D77-74CF170163F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_IDataErrorInfoWithValidationState", "5_IDataErrorInfoWithValidationState\5_IDataErrorInfoWithValidationState.csproj", "{69CC8454-09C6-4F02-9AEE-D045616882C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_IDataErrorInfoWithValidationState", "5_IDataErrorInfoWithValidationState\5_IDataErrorInfoWithValidationState.csproj", "{69CC8454-09C6-4F02-9AEE-D045616882C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_ValidationSummaryInfo", "6_ValidationSummaryInfo\6_ValidationSummaryInfo.csproj", "{1FB2A891-E495-4A9D-9BD1-381D5E31CD71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_ValidationWithMultiField", "7_ValidationWithMultiField\7_ValidationWithMultiField.csproj", "{09D09200-F341-4BC2-9216-CCCD5BC5A1E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_INotifyDataErrorInfo", "8_INotifyDataErrorInfo\8_INotifyDataErrorInfo.csproj", "{1993D796-A942-4358-B7E7-BC18468A2135}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{69CC8454-09C6-4F02-9AEE-D045616882C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69CC8454-09C6-4F02-9AEE-D045616882C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69CC8454-09C6-4F02-9AEE-D045616882C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB2A891-E495-4A9D-9BD1-381D5E31CD71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB2A891-E495-4A9D-9BD1-381D5E31CD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB2A891-E495-4A9D-9BD1-381D5E31CD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB2A891-E495-4A9D-9BD1-381D5E31CD71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09D09200-F341-4BC2-9216-CCCD5BC5A1E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09D09200-F341-4BC2-9216-CCCD5BC5A1E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09D09200-F341-4BC2-9216-CCCD5BC5A1E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09D09200-F341-4BC2-9216-CCCD5BC5A1E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1993D796-A942-4358-B7E7-BC18468A2135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1993D796-A942-4358-B7E7-BC18468A2135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1993D796-A942-4358-B7E7-BC18468A2135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1993D796-A942-4358-B7E7-BC18468A2135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
