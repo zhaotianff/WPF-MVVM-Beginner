@@ -8,6 +8,8 @@ Tutorials for WPF MVVM beginner
 * [ViewModel](4_ViewModel)
 * [CommandAndUserInput](5_CommandAndUserInput)
 * [ViewModelDemo](6_ViewModelDemo)
+* [Dialog](7_Dialog)
+* [Validation](8_Validation)
 
 # Blog
 * [MVVMPattern](https://www.cnblogs.com/zhaotianff/p/18411908)
@@ -16,5 +18,7 @@ Tutorials for WPF MVVM beginner
 * [ViewModel](https://www.cnblogs.com/zhaotianff/p/18795456)
 * [CommandAndUserInput](https://www.cnblogs.com/zhaotianff/p/18791423)
 * [ViewModelDemo](https://www.cnblogs.com/zhaotianff/p/18535320)
+* [Dialog](https://www.cnblogs.com/zhaotianff/p/18816257)
+* [Validation](https://www.cnblogs.com/zhaotianff/p/18861109)
 
 
