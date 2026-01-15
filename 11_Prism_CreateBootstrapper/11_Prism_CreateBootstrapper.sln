@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Prism_CreateBootstrapper", "11_Prism_CreateBootstrapper\11_Prism_CreateBootstrapper.csproj", "{1A747E7C-4351-46C3-9E19-7E92F1CEA870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prism_CreateBootstrapper_XAML", "Prism_CreateBootstrapper_XAML\Prism_CreateBootstrapper_XAML.csproj", "{2688B79B-0CAF-4CAD-8E54-EC93324AFC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A747E7C-4351-46C3-9E19-7E92F1CEA870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A747E7C-4351-46C3-9E19-7E92F1CEA870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A747E7C-4351-46C3-9E19-7E92F1CEA870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A747E7C-4351-46C3-9E19-7E92F1CEA870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2688B79B-0CAF-4CAD-8E54-EC93324AFC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2688B79B-0CAF-4CAD-8E54-EC93324AFC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2688B79B-0CAF-4CAD-8E54-EC93324AFC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2688B79B-0CAF-4CAD-8E54-EC93324AFC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E754D731-70DA-4F55-8F18-950BDD04D57C}
+	EndGlobalSection
+EndGlobal
