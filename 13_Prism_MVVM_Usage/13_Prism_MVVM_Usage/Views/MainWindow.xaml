@@ -1,0 +1,17 @@
+﻿<Window x:Class="_12_Prism_MVVM_Usage.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:local="clr-namespace:_12_Prism_MVVM_Usage"
+        mc:Ignorable="d"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Content="当时时间"></Label>
+        <TextBox Text="{Binding CurrentTime}" Margin="0,0,0,20" Width="200" HorizontalAlignment="Left"></TextBox>
+        <TextBox Text="{Binding MsgContent}" Width="200" HorizontalAlignment="Left" ></TextBox>
+        <Button Content="显示消息" Command="{Binding ShowMessageCommand}" ></Button>
+    </StackPanel>
+</Window>
