@@ -20,5 +20,15 @@ namespace _12_Prism_MVVM_Usage.Views
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //测试用
+            Window1 window1 = new Window1();
+            window1.Show();
+
+            Window2 window2 = new Window2();
+            window2.Show();
+        }
     }
 }

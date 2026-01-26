@@ -7,11 +7,12 @@
         xmlns:local="clr-namespace:_12_Prism_MVVM_Usage"
         mc:Ignorable="d"
         prism:ViewModelLocator.AutoWireViewModel="True"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <StackPanel>
         <Label Content="当时时间"></Label>
         <TextBox Text="{Binding CurrentTime}" Margin="0,0,0,20" Width="200" HorizontalAlignment="Left"></TextBox>
-        <TextBox Text="{Binding MsgContent}" Width="200" HorizontalAlignment="Left" ></TextBox>
+        <TextBox Text="{Binding MsgContent,UpdateSourceTrigger=PropertyChanged}" Width="200" HorizontalAlignment="Left" ></TextBox>
         <Button Content="显示消息" Command="{Binding ShowMessageCommand}" ></Button>
+        <Button Content="CompositeCommand" Command="{Binding CompositeCommand}" Margin="0,30,0,0"></Button>
     </StackPanel>
 </Window>
