@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _14_Prism_Region
+namespace _14_Prism_Region.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

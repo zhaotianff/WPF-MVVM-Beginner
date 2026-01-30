@@ -1,4 +1,7 @@
-﻿using Prism.Ioc;
+﻿using _14_Prism_Region.ViewModels;
+using _14_Prism_Region.Views;
+using Prism.Ioc;
+using Prism.Regions;
 using Prism.Unity;
 using System;
 using System.Collections.Generic;
@@ -18,7 +21,18 @@ namespace _14_Prism_Region
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            
+            containerRegistry.RegisterForNavigation<ViewA, ViewAViewModel>();
+            containerRegistry.RegisterForNavigation<ViewB, ViewBViewModel>();
+            //containerRegistry.RegisterForNavigation<ViewA>();
+        }
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+
+            //设置默认视图
+            var regionManager = this.Container.Resolve<IRegionManager>();
+            regionManager.RequestNavigate("NavigationArea", nameof(ViewA));
         }
     }
 }

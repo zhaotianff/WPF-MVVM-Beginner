@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14_Prism_Region", "14_Prism_Region\14_Prism_Region.csproj", "{3E3BBBC5-77A5-4D38-9EBB-1DE84F911F18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassParameter", "PassParameter\PassParameter.csproj", "{5FAB2D51-2B86-4BA8-8E7F-3604730698DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3E3BBBC5-77A5-4D38-9EBB-1DE84F911F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3BBBC5-77A5-4D38-9EBB-1DE84F911F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E3BBBC5-77A5-4D38-9EBB-1DE84F911F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FAB2D51-2B86-4BA8-8E7F-3604730698DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FAB2D51-2B86-4BA8-8E7F-3604730698DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FAB2D51-2B86-4BA8-8E7F-3604730698DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FAB2D51-2B86-4BA8-8E7F-3604730698DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 
 namespace _14_Prism_Region.ViewModels
 {
-    internal class ViewAViewModel : BindableBase
+    public class ViewAViewModel : BindableBase
     {
+        private string viewName = "ViewA";
+
+        public string ViewName
+        {
+            get => this.viewName;
+            set => SetProperty(ref this.viewName, value);
+        }
     }
 }

@@ -9,6 +9,12 @@ namespace _14_Prism_Region.ViewModels
 {
     public class ViewBViewModel : BindableBase
     {
+        private string viewName = "ViewB";
 
+        public string ViewName
+        {
+            get => this.viewName;
+            set => SetProperty(ref this.viewName, value);
+        }
     }
 }
