@@ -21,7 +21,19 @@ namespace PassParameter
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-           
+            containerRegistry.RegisterForNavigation<ViewList,ViewListViewModel>();
+            containerRegistry.RegisterForNavigation<ViewDetail, ViewDetailViewModel>();
+        }
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+
+            var regionManager = this.Container.Resolve<IRegionManager>();
+            //regionManager.RequestNavigate("NavigationArea", nameof(ViewList));
+
+            //也可以
+            regionManager.RegisterViewWithRegion("NavigationArea", typeof(ViewList));
         }
     }
 }

@@ -9,15 +9,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="750" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <StackPanel Orientation="Horizontal">
-            <Button Content="查看详细" Width="88" Height="28" Margin="10" VerticalAlignment="Center" Command="{Binding ShowDetailCommand}"></Button>
-        </StackPanel>
-
-        <ContentControl Grid.Row="1" prism:RegionManager.RegionName="NavigationArea"></ContentControl>
+        <ContentControl prism:RegionManager.RegionName="NavigationArea"></ContentControl>
     </Grid>
 </Window>
