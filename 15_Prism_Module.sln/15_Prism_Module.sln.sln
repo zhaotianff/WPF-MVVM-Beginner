@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15_Prism_Module.sln", "15_Prism_Module.sln\15_Prism_Module.sln.csproj", "{28F66EFE-2029-4DEB-BC4E-D050708765AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15_Prism_Module", "15_Prism_Module.sln\15_Prism_Module.csproj", "{28F66EFE-2029-4DEB-BC4E-D050708765AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module.Register", "Module.Register\Module.Register.csproj", "{072595E4-3C46-4723-AB69-7EC02F9FCC84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.Register", "Module.Register\Module.Register.csproj", "{072595E4-3C46-4723-AB69-7EC02F9FCC84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonModule", "CommonModule\CommonModule.csproj", "{721E43BF-02BB-4B79-9340-0DFAB5A9340D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module.ViewList", "Module.ViewList\Module.ViewList.csproj", "{FA79890C-4469-4B6C-AD93-CA929D836880}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{072595E4-3C46-4723-AB69-7EC02F9FCC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{072595E4-3C46-4723-AB69-7EC02F9FCC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{072595E4-3C46-4723-AB69-7EC02F9FCC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721E43BF-02BB-4B79-9340-0DFAB5A9340D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721E43BF-02BB-4B79-9340-0DFAB5A9340D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721E43BF-02BB-4B79-9340-0DFAB5A9340D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721E43BF-02BB-4B79-9340-0DFAB5A9340D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA79890C-4469-4B6C-AD93-CA929D836880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA79890C-4469-4B6C-AD93-CA929D836880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA79890C-4469-4B6C-AD93-CA929D836880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA79890C-4469-4B6C-AD93-CA929D836880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
