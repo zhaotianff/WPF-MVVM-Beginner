@@ -27,6 +27,10 @@ namespace _15_Prism_Module.sln
             
         }
 
+        /// <summary>
+        /// 代码加载
+        /// </summary>
+        /// <param name="moduleCatalog"></param>
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
             base.ConfigureModuleCatalog(moduleCatalog);
@@ -35,12 +39,22 @@ namespace _15_Prism_Module.sln
             moduleCatalog.AddModule<ViewListModule>();
         }
 
+        /// <summary>
+        /// 目录扫描
+        /// </summary>
+        /// <returns></returns>
+        //protected override IModuleCatalog CreateModuleCatalog()
+        //{
+        //    return new DirectoryModuleCatalog() { ModulePath = @".\Modules" };
+        //}
+
         protected override void OnInitialized()
         {
             base.OnInitialized();
 
             var regionManager = this.Container.Resolve<IRegionManager>();
 
+            //设置区域默认View
             regionManager.RegisterViewWithRegion("EditArea", typeof(RegisterView));
             regionManager.RegisterViewWithRegion("ListArea", typeof(EmployeeListView));
         }
