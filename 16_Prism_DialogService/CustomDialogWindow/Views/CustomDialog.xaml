@@ -1,0 +1,16 @@
+﻿<tianxia:BlurWindow x:Class="CustomDialogWindow.Views.CustomDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomDialogWindow.Views"
+        xmlns:tianxia="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        mc:Ignorable="d"
+        Title="CustomDialog" Height="450" Width="400" ContentSpan="True" WindowStartupLocation="CenterScreen">
+    <tianxia:BlurWindow.Background>
+        <SolidColorBrush Color="White" Opacity=".1"></SolidColorBrush>
+    </tianxia:BlurWindow.Background>
+    <Grid>
+        
+    </Grid>
+</tianxia:BlurWindow>
